@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #3b4664;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calcBtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: hsl(224, 36%, 15%);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.grid-container button {
+  background-color: #eae3db;
+  padding: 12px;
+  font-size: 27px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+  font-family: "League Spartan", serif;
+  color: hsl(224, 28%, 35%);
+}
+
+.themeBtns .btns .container {
+}
+
+.grid-container .del {
+  background-color: hsl(225, 21%, 49%);
+  color: white;
+  font-size: 24px;
+}
+
+.grid-container .reset {
+  grid-column: span 2;
+  background-color: hsl(225, 21%, 49%);
+  color: white;
+  font-size: 24px;
+}
+
+.grid-container .equals {
+  grid-column: span 2;
+  background-color: hsl(6, 63%, 50%);
+  color: white;
+}
+
+.display {
+  background-color: hsl(224, 36%, 15%);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: 12vh;
+  margin-bottom: 18px;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+  text-align: right;
+  overflow: hidden;
+  font-family: "League Spartan", serif;
+  text-overflow: ellipsis;
+}
+
+.themeBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  max-width: 400px;
+  font-family: "League Spartan", serif;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  margin-bottom: 18px;
+}
+
+.themeBtns .btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.themeBtns .btns p {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+}
+
+.themeBtns .container {
+  display: flex;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.themeBtns .numbers {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.themeBtns .toggle-wrapper {
+  position: relative;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.toggle {
+  width: 50px;
+  height: 20px;
+  background: #1c2438;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider {
+  width: 18px;
+  height: 18px;
+  background: #ff5c5c;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle {
+  background: #44506a;
+}
+
+body.theme-first .slider {
+  left: 2px;
+}
+
+body.theme-second .slider {
+  left: 15px;
+}
+body.theme-third .slider{
+  left: 30px;
+}
+body.theme-second {
+  background-color: hsl(0, 0%, 90%);
+}
+
+body.theme-second .display {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+
+body.theme-second .themeBtns {
+  color: hsl(60, 10%, 19%);
+}
+
+body.theme-second .calcBtns {
+  background-color: hsl(0, 5%, 81%);
+}
+
+body.theme-second .grid-container button {
+  background-color: hsl(45, 7%, 89%);
+  color: hsl(60, 10%, 19%);
+}
+body.theme-second .grid-container .del {
+  background-color: hsl(185, 42%, 37%);
+  color: hsl(0, 0%, 90%);
+}
+body.theme-second .grid-container .reset {
+  background-color: hsl(185, 42%, 37%);
+  color: hsl(0, 0%, 90%);
+}
+
+body.theme-second .grid-container .equals {
+  background-color: hsl(25, 98%, 40%);
+  color: hsl(0, 0%, 90%);
+}
+
+body.theme-second .themeBtns .btns .container .toggle {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.body.theme-second .slider {
+  background-color: hsl(25, 98%, 40%);
+}
+
+body.theme-third {
+  background-color: hsl(268, 75%, 9%);
+}
+
+body.theme-third .display {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+
+body.theme-third .themeBtns {
+  color: hsl(52, 100%, 62%);
+}
+
+body.theme-third .calcBtns {
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.theme-third .grid-container button {
+  background-color: hsl(268, 47%, 21%);
+  color: hsl(52, 100%, 62%);
+}
+body.theme-third .grid-container .del {
+  background-color: hsl(281, 89%, 26%);
+  color: hsl(0, 0%, 90%);
+}
+body.theme-third .grid-container .reset {
+  background-color: hsl(281, 89%, 26%);
+  color: hsl(0, 0%, 90%);
+}
+
+body.theme-third .grid-container .equals {
+  background-color: hsl(176, 100%, 44%);
+  color: black;
+}
+body.theme-third .themeBtns .btns .container .toggle {
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.theme-third .slider {
+  background-color: hsl(176, 100%, 44%);
+}
+
+.themeBtns .container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
